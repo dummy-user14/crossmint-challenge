@@ -1,7 +1,7 @@
 # Crossmint Challenge
 
 ## TL;DR
-This project aims to solve the crossmint challenge, with a full-stack development. You can see a functional demo of the proyect [here](https://vercel.com)
+This project aims to solve the crossmint challenge, with a full-stack development. You can see a functional demo of the proyect [here](https://crossmint-challenge-tau.vercel.app)
 
 ![final-megaverse](/public/final-megaverse.png)
 
