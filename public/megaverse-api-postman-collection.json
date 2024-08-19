@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "c1fbcb96-4b36-41f9-92c7-8b720aacc1d5",
+		"name": "Crossmint Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18553092"
+	},
+	"item": [
+		{
+			"name": "Map",
+			"item": [
+				{
+					"name": "Map Goal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/map/:candidateId/goal",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"map",
+								":candidateId",
+								"goal"
+							],
+							"variable": [
+								{
+									"key": "candidateId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actual Map",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/map/:candidateId",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"map",
+								":candidateId"
+							],
+							"variable": [
+								{
+									"key": "candidateId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POLYanets",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"row\": 0,\n    \"column\": 0,\n    \"candidateId\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/polyanets",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"polyanets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"row\": 0,\n    \"column\": 0,\n    \"candidateId\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/polyanets",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"polyanets"
+							],
+							"query": [
+								{
+									"key": "row",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "column",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SOLoons",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"row\": 0,\n    \"column\": 0,\n    \"color\": \"\",\n    \"candidateId\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/soloons",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"soloons"
+							],
+							"query": [
+								{
+									"key": "row",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "column",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"row\": 6,\n    \"column\": 4,\n    \"candidateId\": \"4705086f-0bb7-40c8-8a2f-5c702c79af2e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/polyanets",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"polyanets"
+							],
+							"query": [
+								{
+									"key": "row",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "column",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comETHs",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"row\": 0,\n    \"column\": 0,\n    \"direction\": \"\",\n    \"candidateId\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/comeths",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"comeths"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"row\": 0,\n    \"column\": 0,\n    \"candidateId\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://challenge.crossmint.io/api/comeths",
+							"protocol": "https",
+							"host": [
+								"challenge",
+								"crossmint",
+								"io"
+							],
+							"path": [
+								"api",
+								"comeths"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
