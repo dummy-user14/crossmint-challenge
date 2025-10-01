@@ -1,5 +1,12 @@
 # Crossmint Challenge
+## TL;DR
 
+## V2 Update
+- First thing, firsts. Update from npm to pnpm. speed is key
+- add more atomic commits, to really understand the thinking progress of changes. not just 2
+-
+
+----------------
 ## TL;DR
 This project aims to solve the crossmint challenge, with a full-stack development. You can see a functional demo of the proyect [here](https://crossmint-challenge-tau.vercel.app)
 

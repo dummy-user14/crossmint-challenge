@@ -3,7 +3,8 @@ import { getMap, getMapGoal } from "@/server/map";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function CandidateIdPage({ params }: { params: { candidateId: string } }) {
+export default async function CandidateIdPage(props: { params: Promise<{ candidateId: string }> }) {
+  const params = await props.params;
   const candidateId = params.candidateId
   const actualMap = await getMap({ candidateId })
   const goalMap = await getMapGoal({ candidateId })
