@@ -1,10 +1,23 @@
 # Crossmint Challenge
-## TL;DR
 
-## V2 Update
-- First thing, firsts. Update from npm to pnpm. speed is key
-- add more atomic commits, to really understand the thinking progress of changes. not just 2
--
+## v2 – What changed and why
+
+| Area                | What we did                                                                                          | Why it matters                                                                                                                         |
+|---------------------|-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Dependency management| Migrated from **npm** to **pnpm** (`pnpm i`)                                                         | The **pnpm** package manager is now preferred for its speed and efficiency.                                                            |
+| Update dependencies  | Updated main dependencies (Next.js & React)                                                         | • Ensures compatibility with the latest features and security patches. <br>• Staying current with the newest stable versions is essential. |
+| Commit history       | Adopted more **atomic, single-purpose commits**                                                      | • Each commit focuses on a single task , making it easier to understand and review changes. <br>• This approach is crucial for efficiently reviewing pull requests. |
+| Typed code          | Improved types and interfaces                                                                         | • Well-defined types and interfaces enhance the developer experience and reduce bugs.                                                  |
+| Entities module     | Fully **refactored** the creation and deletion of entities on the map.                               | • Previously scattered logic is now centralized, simplifying management and extension. All entity-related logic is now in one place (`src/server/entity.ts`). |
+| Error handling      | Log 3 different types of errors                                                                        | Detecting and logging request errors are crucial for debugging and user feedback.                                                      |
+| Networking          | Created a custom **Axios instance** (`src/server/http-client.ts`)                                    | • Injects `candidateId` into every POST/DELETE request. <br>• Pre-sets base URL, timeout, and JSON headers. <br>• This setup simplifies mocking and testing in real scenarios. |
+| Environment         | Moved secrets and URLs to **`.env`**                                                                 | • Hides sensitive data.                                                                                                               |
+
+### What could we improve?  
+
+A more robust solution could involve implementing queues to manage API requests and developing a more complex retry strategy that includes exponential backoff and jitter. Currently, it adds a timeout between requests to avoid being rate limited.
+
+We should thoroughly understand the potential error responses and establish a strong custom error handling system. The updates in this version may not be sufficient due to a lack of documentation from the source.
 
 ----------------
 ## TL;DR
