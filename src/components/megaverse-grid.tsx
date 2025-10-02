@@ -1,4 +1,4 @@
-import { MegaverseMap } from "@/server/map"
+import { MegaverseMap } from "@/types/map"
 import { MegaverseEntity } from "./megaverse-entity"
 
 interface Grid {

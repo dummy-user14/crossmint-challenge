@@ -4,13 +4,15 @@ import { toast } from "@/components/ui/use-toast"
 import { useRouter } from "next/navigation"
 import { completePhase, restartMap, verifyMap } from "@/server/actions"
 import { Loader } from "./loader"
+import { MegaverseMap } from "@/types/map"
 
 
 interface MegaverseActionsProps {
-    candidateId: string
+    map: MegaverseMap
+    goal: MegaverseMap
 }
 
-export const MegaverseActions: FC<MegaverseActionsProps> = ({ candidateId }) => {
+export const MegaverseActions: FC<MegaverseActionsProps> = ({ map, goal }) => {
     const router = useRouter()
     const [isRestarting, setIsRestarting] = useState(false)
     const [isCompleting, setIsCompleting] = useState(false)
@@ -19,7 +21,7 @@ export const MegaverseActions: FC<MegaverseActionsProps> = ({ candidateId }) => 
     const handleRestartMap = async () => {
         setIsRestarting(true)
         try {
-            await restartMap({ candidateId })
+            await restartMap({ map })
             console.log("Map restarted")
             toast({
                 title: "Map restarted ✅",
@@ -37,7 +39,7 @@ export const MegaverseActions: FC<MegaverseActionsProps> = ({ candidateId }) => 
     const handleCompletePhase = async () => {
         setIsCompleting(true)
         try {
-            await completePhase({ candidateId })
+            await completePhase({ map, goal })
             console.log("Map completed")
             toast({
                 title: "Phase completed ✅",
@@ -55,7 +57,7 @@ export const MegaverseActions: FC<MegaverseActionsProps> = ({ candidateId }) => 
     const handleVerify = async () => {
         setIsVerifying(true)
         try {
-            const equal = await verifyMap({ candidateId })
+            const equal = await verifyMap({ map, goal })
             if (equal) {
                 toast({
                     title: "Map Verified ✅",
@@ -85,21 +87,21 @@ export const MegaverseActions: FC<MegaverseActionsProps> = ({ candidateId }) => 
             <Button 
                 onClick={handleRestartMap}
                 disabled={isRestarting}
-                className="bg-gradient-to-r from-[#60FA97] to-[#59DEF5] font-semibold text-xl text-[#29414D] min-w"
+                className="bg-gradient-to-r from-[#00FF85] to-[#00E0FF] font-semibold text-xl text-[#29414D] min-w"
             >
                 Restart Map
             </Button>
             <Button 
                 onClick={handleCompletePhase}
                 disabled={isCompleting}
-                className="bg-gradient-to-r from-[#60FA97] to-[#59DEF5] font-semibold text-xl text-[#29414D] min-w"
+                className="bg-gradient-to-r from-[#00FF85] to-[#00E0FF] font-semibold text-xl text-[#29414D] min-w"
             >
                 Complete Phase
             </Button>
             <Button 
                 onClick={handleVerify}
                 disabled={isVerifying}
-                className="bg-gradient-to-r from-[#60FA97] to-[#59DEF5] font-semibold text-xl text-[#29414D]"
+                className="bg-gradient-to-r from-[#00FF85] to-[#00E0FF] font-semibold text-xl text-[#29414D]"
             >
                 Verify Phase
             </Button>

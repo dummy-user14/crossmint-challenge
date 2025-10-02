@@ -7,22 +7,12 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { useToast } from "@/components/ui/use-toast"
-import { FC, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "./ui/separator"
 import { getMap } from "@/server/map"
 import { useRouter } from "next/navigation"
-
-
-interface CandidateIdFormProps {
-}
-
-const candidateIdSchema = z.object({
-    candidateId: z.string().min(1, "Candidate ID is required"),
-})
+import { candidateIdSchema } from "@/lib/validator"
 
 export const CandidateIdForm = () => {
-    // const [candidateId, setCandidateId] = useState("")
     const router = useRouter()
     const { toast } = useToast()
     const form = useForm<z.infer<typeof candidateIdSchema>>({
@@ -82,7 +72,6 @@ export const CandidateIdForm = () => {
                         </div>
                     </form>
                 </Form>
-                <Separator/>
             </CardContent>
         </Card>
       
